@@ -52,11 +52,24 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
+    .bio-portrait img + img {
+      margin-top: 1em; /* space between portraits */
+    }
     .button-group {
       display: flex;
       gap: 1em;
       justify-content: center;
       margin-top: 2em;
+    }
+
+    /* Traditional hyperlink styling in bio text */
+    .bio-text a {
+      color: #1a0dab;            /* standard link blue */
+      text-decoration: underline;
+    }
+    .bio-text a:hover {
+      color: #ff4757;            /* accent hover color */
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -81,7 +94,7 @@
         <!-- Text -->
         <div class="bio-text">
           <h2>Biography</h2>
-          <p>
+                    <p>
             Jeff Schueler is an experimental particle physicist specializing in improving particle detector
             performance through advanced machine learning techniques. Born and raised in the Seattle area,
             he earned his Bachelor’s degrees in Mathematics and Physics at the University of Washington.
@@ -136,13 +149,17 @@
           </p>
           <p>
             In his spare time, Jeff enjoys crossword puzzles, running, reading, PC building, retro video games,
-            cooking, and rock climbing.
+            cooking, hiking, and rock climbing. He is also a certified <a href="https://www.reddit.com/r/HydroHomies/?rdt=49959" target="_blank">hydro homie</a>!
           </p>
         </div>
 
-        <!-- Portrait & Buttons -->
+        <!-- Portraits & Buttons -->
         <div class="bio-portrait">
+          <!-- Primary portrait -->
           <img src="assets/images/parallax-bg.jpg" alt="Jeff Schueler">
+          <!-- New Fuji photo below -->
+          <img src="assets/images/jeff_fuji.jpg" alt="Jeff at Mt. Fuji">
+          <!-- Buttons -->
           <div class="button-group">
             <a href="research.html" class="btn">Learn More About My Research</a>
             <a href="teaching.html" class="btn">Learn More About My Teaching</a>
