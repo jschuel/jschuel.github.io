@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth‐scroll to in‐page anchors
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (!target) return;
-            target.scrollIntoView({ behavior: 'smooth' });
-        });
+  // Smooth-scroll specifically for the Explore button (#about)
+  document.querySelectorAll('a[href="#about"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.getElementById('about');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
+  });
 });

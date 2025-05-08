@@ -118,8 +118,9 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* PARALLAX (Contact only) */
+/* PARALLAX SECTIONS */
 .parallax {
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,8 +138,29 @@ nav ul li a:hover {
     position: relative;
     z-index: 1;
 }
+/* Unified About + Contact section in index.html */
+#about.parallax {
+    background: url('../images/header-bg2.jpg') no-repeat center center/cover fixed;
+    /* ensure the section fills at least one viewport so the old hero is hidden */
+    min-height: 100vh;
+    /* keep a little top/bottom breathing room */
+    padding: 4em 0 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #contact.parallax {
     background: url('../images/contact-bg.jpg') no-repeat center center/cover fixed;
+}
+.parallax h2 {
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+.parallax p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* RESEARCH (Projects) */
@@ -150,6 +172,8 @@ nav ul li a:hover {
     font-size: 2.5em;
     margin-bottom: 1em;
 }
+
+/* GRID & CARDS */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
@@ -220,17 +244,7 @@ footer p {
 
 /* Active nav link */
 nav ul li a.active {
-    color: #ff4757;
+    color: #ff4757;                /* your accent color */
     border-bottom: 2px solid #ff4757;
     padding-bottom: 4px;
-}
-
-/* Unified About + Contact section in index.html */
-#about.parallax {
-    background: url('../images/header-bg2.jpg') no-repeat center center/cover fixed;
-    min-height: 100vh;
-    padding: 4em 0 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }

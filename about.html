@@ -5,26 +5,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Biography | Definitely Jeff</title>
 
-  <!-- Global Styles -->
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
-    rel="stylesheet"
-  >
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <!-- About‐page layout overrides -->
+  <!-- Page‐specific layout -->
   <style>
-    /* solid black background */
     #about {
       background: #000;
-      color: #fff;
       padding: 4em 20px;
+      color: #fff;
     }
-    /* two‐column layout: text on left, portrait on right */
     .about-layout {
       display: flex;
       flex-wrap: wrap;
@@ -40,7 +32,7 @@
       line-height: 1.6;
     }
     .bio-text h2 {
-      font-size: 2.5em; /* match Research page */
+      font-size: 2.5em;
       margin-bottom: 0.5em;
     }
     .bio-portrait {
@@ -51,7 +43,7 @@
     .bio-portrait img {
       width: 100%;
       max-width: 300px;
-      border-radius: 50%;
+      border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
     .button-group {
@@ -64,11 +56,11 @@
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- NAVIGATION BAR -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
+      <li><a href="about.html" class="active">About Me</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="teaching.html">Teaching</a></li>
       <li><a href="cv.html">CV</a></li>
@@ -76,69 +68,30 @@
     </ul>
   </nav>
 
-  <!-- About Section -->
   <main>
     <section id="about">
       <div class="about-layout">
-        <!-- Biography Text -->
+
+        <!-- Text -->
         <div class="bio-text">
           <h2>Biography</h2>
-          <p>
-            Jeff Schueler is an experimental particle physicist specializing in improving particle detector
-            performance through advanced machine learning techniques. Born and raised in the Seattle area,
-            he earned his Bachelor’s degrees in Mathematics and Physics at the University of Washington,
-            where he developed a strong foundation in both theory and data analysis.
-          </p>
-          <p>
-            After graduating, Jeff served as a New York City Teaching Fellow at Maspeth High School in Queens,
-            NY. As the school’s first physics teacher, he built up the laboratory and curriculum from the
-            ground up, introducing AP Physics C in his second year and mentoring students in experimental
-            design and scientific reasoning.
-          </p>
-          <p>
-            Jeff then moved to Honolulu to pursue graduate studies at the University of Hawaiʻi, where he
-            investigated beam-induced neutron backgrounds at the SuperKEKB accelerator for the Belle II
-            experiment and led gas Time Projection Chamber (TPC) research and development. In his third year,
-            he lived onsite at KEK in Tsukuba, Japan, and led the commissioning efforts of shoebox-sized TPCs
-            that remain in use to this day.
-          </p>
-          <p>
-            In the final year of his PhD, Jeff spearheaded the application of deep learning to enhance
-            particle identification and directional reconstruction in gas TPCs. He developed a custom ResNet
-            architecture that demonstrated, for the first time, vector-directional head/tail reconstruction
-            of keV-scale nuclear recoils—an important milestone toward competitive directional dark matter
-            detectors.
-          </p>
-          <p>
-            Jeff received his PhD in 2022 and joined the University of New Mexico as a postdoctoral researcher
-            on the MIGDAL experiment, which aims to observe and characterize the Migdal effect in nuclear
-            scattering. Early in his tenure, he conceived and implemented a YOLOv8-based real-time image
-            analysis pipeline, processing nearly 2 TB of data per hour on a consumer desktop to search for
-            Migdal signatures—an approach now running continuously as MIGDAL collects data.
-          </p>
-          <p>
-            His current research interests include data-driven detector simulations, front-end machine
-            learning for rare event searches, and interdisciplinary collaborations that leverage AI to
-            solve cutting-edge problems in experimental physics.
-          </p>
-          <p>
-            In his spare time, Jeff enjoys crossword puzzles, running, retro video games, cooking, and rock climbing.
-          </p>
+          <!-- (all your paragraphs here…) -->
         </div>
 
         <!-- Portrait & Buttons -->
         <div class="bio-portrait">
-          <img src="assets/images/self-portrait.png" alt="Self Portrait">
+          <img src="assets/images/parallax-bg.jpg" alt="Jeff Schueler">
           <div class="button-group">
             <a href="research.html" class="btn">Learn More About My Research</a>
             <a href="teaching.html" class="btn">Learn About My Teaching</a>
           </div>
         </div>
+
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <p>&copy; 2025 Jeff Schueler | See me at:</p>
@@ -150,7 +103,6 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="assets/js/scripts.js"></script>
 </body>
 </html>
