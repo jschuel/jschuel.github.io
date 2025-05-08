@@ -7,21 +7,26 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" 
-    rel="stylesheet"
-  >
-  <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <!-- Page-specific layout -->
+  <!-- Page‐specific layout inspired by about.html -->
   <style>
-    /* Avoid bleeding under fixed nav */
     section { scroll-margin-top: 60px; }
-
-    /* Intro buttons */
+    /* Intro section styling */
+    #research-intro {
+      padding-top: 80px;
+      text-align: center;
+    }
+    #research-intro .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1.page-title {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+    /* Button group */
     .button-group.research-buttons {
       display: flex;
       gap: 1em;
@@ -29,8 +34,15 @@
       margin-top: 2em;
       flex-wrap: wrap;
     }
-
-    /* Projects row: single line */
+    /* Projects section */
+    #research {
+      padding: 80px 0;
+      text-align: center;
+    }
+    #research .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
     .projects-row {
       display: flex;
       gap: 20px;
@@ -43,9 +55,7 @@
       max-width: 250px;
       text-align: left;
     }
-
-    /* Sub-buttons hidden until hover */
-    .projects-row .card .sub-buttons {
+    .sub-buttons {
       display: none;
       flex-direction: column;
       gap: 0.5em;
@@ -54,7 +64,7 @@
     .projects-row .card:hover .sub-buttons {
       display: flex;
     }
-    .projects-row .card .sub-buttons .btn {
+    .sub-buttons .btn {
       font-size: 0.9em;
       padding: 0.5em 1em;
     }
@@ -62,7 +72,6 @@
 </head>
 <body>
 
-  <!-- NAVIGATION BAR -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -75,20 +84,13 @@
   </nav>
 
   <main>
-    <!-- Research Intro -->
     <section id="research-intro">
       <div class="container">
         <h1 class="page-title">
           Developing novel machine learning techniques to improve the performance of imaging particle detectors
         </h1>
-        <p>
-          Placeholder: I develop and apply advanced machine learning algorithms to enhance particle identification,
-          directional reconstruction, and background suppression in high-resolution imaging detectors.
-        </p>
-        <p>
-          Placeholder: My work spans real-time object detection pipelines, end-to-end simulation frameworks,
-          and deep neural networks for rare event search experiments.
-        </p>
+        <p>Placeholder: I develop and apply advanced ML methods to enhance particle ID and background rejection in time projection chambers.</p>
+        <p>Placeholder: My work includes real-time object detection, fast simulation frameworks, and deep–learning reconstruction networks.</p>
         <div class="button-group research-buttons">
           <a href="publications.html" class="btn">Selected Publications</a>
           <a href="talks.html" class="btn">Selected Talks</a>
@@ -97,71 +99,49 @@
       </div>
     </section>
 
-    <!-- Projects -->
     <section id="research">
       <div class="container">
         <h2>Recent Projects</h2>
         <div class="projects-row">
-
-          <!-- Project 1 -->
           <div class="card">
             <img src="assets/images/project1.png" alt="migYOLO">
             <h3>migYOLO</h3>
-            <p>
-              Real-time object detection pipeline for the MIGDAL detector, including automated ML-assisted
-              bounding-box labeling templates.
-            </p>
+            <p>Real-time object detection pipeline for MIGDAL, with automated ML-assisted bounding-box labeling.</p>
             <div class="sub-buttons">
               <a href="https://github.com/jschuel/migYOLO/tree/main" class="btn" target="_blank">GitHub</a>
               <a href="https://migyolo.readthedocs.io/en/stable/" class="btn" target="_blank">Documentation</a>
             </div>
           </div>
-
-          <!-- Project 2 -->
           <div class="card">
             <img src="assets/images/project2.png" alt="MIGDAL_simulator">
             <h3>MIGDAL_simulator</h3>
-            <p>
-              Fast end-to-end simulation of the MIGDAL detector with a flexible YAML interface
-              for tuning simulation parameters.
-            </p>
+            <p>Fast end-to-end MIGDAL detector simulation with a flexible YAML interface.</p>
             <div class="sub-buttons">
               <a href="https://github.com/jschuel/MIGDAL_simulator" class="btn" target="_blank">GitHub</a>
               <a href="https://migdal-simulator.readthedocs.io/en/latest/index.html" class="btn" target="_blank">Documentation</a>
             </div>
           </div>
-
-          <!-- Project 3 -->
           <div class="card">
             <img src="assets/images/project3.png" alt="BEASTnet">
             <h3>BEASTnet</h3>
-            <p>
-              2D and 3D CNNs achieving world-leading directional reconstruction performance
-              for University of Hawaiʻi TPCs.
-            </p>
+            <p>2D/3D CNNs achieving world-leading directional reconstruction in BEAST TPCs.</p>
             <div class="sub-buttons">
               <a href="comingsoon.html" class="btn">Coming Soon</a>
             </div>
           </div>
-
-          <!-- Project 4 -->
           <div class="card">
             <img src="assets/images/objectkeypointls.png" alt="Object Keypoint Detection">
             <h3>Object Keypoint Detection</h3>
-            <p>
-              Framework for XML-based keypoint labeling in LabelStudio, including YOLOv8-pose preannotations.
-            </p>
+            <p>XML‐based keypoint labeling in LabelStudio with YOLOv8‐pose preannotations.</p>
             <div class="sub-buttons">
               <a href="https://github.com/jschuel/objectKeyPointLabelStudio" class="btn" target="_blank">GitHub</a>
             </div>
           </div>
-
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       <p>&copy; 2025 Jeff Schueler | See me at:</p>
@@ -173,7 +153,6 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="assets/js/scripts.js"></script>
 </body>
 </html>
