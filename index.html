@@ -9,6 +9,23 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Page‐specific override: make About+Contact fill viewport minus footer -->
+  <style>
+    /* reserve ~120px at bottom so footer peeks into view */
+    #about.parallax {
+      min-height: calc(100vh - 120px);
+      padding: 4em 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      background: url('assets/images/header-bg2.jpg') no-repeat center center/cover fixed;
+    }
+    /* extra spacing between About and Contact blocks */
+    #about .contact-block {
+      margin-top: 5em;
+    }
+  </style>
 </head>
 <body>
 
@@ -50,8 +67,8 @@
         <p>Who am I? Definitely Jeff. Want to learn more?</p>
         <a href="about.html" class="btn">Learn More</a>
 
-        <!-- Contact Me (more space below About) -->
-        <div class="contact-block" style="margin-top: 5em;">
+        <!-- Contact Me -->
+        <div class="contact-block">
           <h2>Contact Me</h2>
           <p>Like what you see? Want to collaborate? Give me a job?</p>
           <a href="mailto:schuel93@gmail.com" class="btn">Get In Touch</a>
