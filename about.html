@@ -84,14 +84,21 @@
 <body>
 
   <!-- NAVIGATION BAR -->
-  <nav>
+    <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About Me</a></li>
-      <li><a href="research.html">Research</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li class="dropdown">
+        <a href="research.html">Research</a>
+        <ul class="dropdown-menu">
+          <li><a href="research.html">Overview</a></li>
+          <li><a href="publications.html">Selected Publications</a></li>
+          <li><a href="talks.html">Selected Talks</a></li>
+        </ul>
+      </li>
       <li><a href="teaching.html">Teaching</a></li>
       <li><a href="cv.html">CV</a></li>
-      <li><a href="mailto:schuel93@gmail.com" target="_blank">Contact</a></li>
+      <li><a href="mailto:schuel93@gmail.com">Contact</a></li>
     </ul>
   </nav>
 

@@ -242,7 +242,7 @@ nav ul li a.active {
     padding-bottom: 4px;
 }
 
-/* === Dropdown menu under “Research” on hover === */
+/* === Research dropdown, on hover, site-wide === */
 nav ul li.dropdown {
   position: relative;
 }
@@ -268,4 +268,13 @@ nav ul li.dropdown .dropdown-menu li a {
 }
 nav ul li.dropdown .dropdown-menu li a:hover {
   background: #333;
+}
+
+/* === Link colors on Publications page === */
+#publications a {
+  color: #4A90E2;
+  text-decoration: underline;
+}
+#publications a:hover {
+  color: #ff4757;
 }
