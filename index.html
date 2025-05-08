@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Definitely Jeff</title>
 
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
@@ -17,22 +18,45 @@
 </head>
 <body>
 
-  <!-- NAV + HERO -->
-  <div id="site-header">
-    <!-- inlined partials/header.html here -->
-    <!-- …see the header.html snippet above… -->
-  </div>
+  <!-- NAVIGATION BAR + SPLASH HEADER -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="mailto:schuel93@gmail.com" target="_blank">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="header">
+    <div class="container">
+      <h1>Definitely Jeff.</h1>
+      <img src="assets/images/self-portrait.png" alt="Self Portrait" class="self-portrait">
+      <ul class="social">
+        <li><a href="https://github.com/jschuel"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/jeff-schueler-ph-d-ab3bb5248/"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://inspirehep.net/authors/1753258" target="_blank"><i class="fas fa-graduation-cap"></i></a></li>
+      </ul>
+      <p>Your Journey Starts Here</p>
+      <div class="splash-buttons">
+        <a href="#about" class="btn">Explore</a>
+        <a href="mailto:schuel93@gmail.com" class="btn">Get In Touch</a>
+      </div>
+    </div>
+  </header>
 
   <main>
-    <!-- ONE PARALLAX SECTION for both About + Contact -->
+    <!-- Unified About + Contact Section -->
     <section id="about" class="parallax">
       <div class="container">
-        <!-- ABOUT -->
+        <!-- About Me -->
         <h2>About Me</h2>
         <p>Who am I? Definitely Jeff. Want to learn more?</p>
         <a href="about.html" class="btn">Learn More</a>
 
-        <!-- CONTACT (now inside same section) -->
+        <!-- Contact Me -->
         <div style="margin-top: 3em;">
           <h2>Contact Me</h2>
           <p>Like what you see? Want to collaborate? Give me a job?</p>
@@ -40,25 +64,21 @@
         </div>
       </div>
     </section>
-
-    <!-- no separate #contact section any more -->
-
   </main>
 
-  <!-- FOOTER (inlined partials/footer.html) -->
-  <div id="site-footer">
-    <footer>
-      <div class="container">
-        <p>&copy; 2024 Jeff Schueler | See me at:</p>
-        <ul class="social">
-          <li><a href="https://github.com/jschuel"><i class="fab fa-github"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/jeff-schueler-ph-d-ab3bb5248/"><i class="fab fa-linkedin"></i></a></li>
-          <li><a href="https://inspirehep.net/authors/1753258"><i class="fas fa-graduation-cap"></i></a></li>
-        </ul>
-      </div>
-    </footer>
-  </div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Jeff Schueler | See me at:</p>
+      <ul class="social">
+        <li><a href="https://github.com/jschuel"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/jeff-schueler-ph-d-ab3bb5248/"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://inspirehep.net/authors/1753258"><i class="fas fa-graduation-cap"></i></a></li>
+      </ul>
+    </div>
+  </footer>
 
+  <!-- Scripts -->
   <script src="assets/js/scripts.js"></script>
 </body>
 </html>
