@@ -7,26 +7,34 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" 
+    rel="stylesheet"
+  >
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  >
 
-  <!-- Page‐specific layout inspired by about.html -->
+  <!-- Page-specific layout -->
   <style>
+    /* Ensure content scrolls below the fixed nav */
     section { scroll-margin-top: 60px; }
-    /* Intro section styling */
+
+    /* Research Intro — narrower side padding, wider max-width */
     #research-intro {
       padding-top: 80px;
       text-align: center;
     }
     #research-intro .container {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
+      padding: 0 10px;
     }
     h1.page-title {
       font-size: 2.5em;
       margin-bottom: 0.5em;
     }
-    /* Button group */
     .button-group.research-buttons {
       display: flex;
       gap: 1em;
@@ -34,14 +42,16 @@
       margin-top: 2em;
       flex-wrap: wrap;
     }
-    /* Projects section */
+
+    /* Projects — same narrower padding, allow more width */
     #research {
       padding: 80px 0;
       text-align: center;
     }
     #research .container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
+      padding: 0 10px;
     }
     .projects-row {
       display: flex;
@@ -52,7 +62,7 @@
     }
     .projects-row .card {
       flex: 1;
-      max-width: 250px;
+      max-width: 300px;  /* increased from 250px */
       text-align: left;
     }
     .sub-buttons {
@@ -87,10 +97,10 @@
     <section id="research-intro">
       <div class="container">
         <h1 class="page-title">
-          Developing novel machine learning techniques to improve the performance of imaging particle detectors
+          Utilizing machine learning to improve imaging particle detectors
         </h1>
-        <p>Placeholder: I develop and apply advanced ML methods to enhance particle ID and background rejection in time projection chambers.</p>
-        <p>Placeholder: My work includes real-time object detection, fast simulation frameworks, and deep–learning reconstruction networks.</p>
+        <p>Placeholder: I develop advanced ML algorithms to boost signal identification and reduce backgrounds in gas TPCs and other imaging detectors.</p>
+        <p>Placeholder: My work spans real-time object detection, rapid simulation tools, and deep neural networks for precise reconstruction.</p>
         <div class="button-group research-buttons">
           <a href="publications.html" class="btn">Selected Publications</a>
           <a href="talks.html" class="btn">Selected Talks</a>
@@ -103,40 +113,45 @@
       <div class="container">
         <h2>Recent Projects</h2>
         <div class="projects-row">
+
           <div class="card">
             <img src="assets/images/project1.png" alt="migYOLO">
             <h3>migYOLO</h3>
-            <p>Published software tools for setting up a real time object detection pipeline in the MIGDAL detector. This software includes templates for setting up automated ML-assisted bounding box labeling that can be adapted to other experiments.</p>
+            <p>Real-time object detection pipeline for MIGDAL, with automated ML-assisted bounding-box labeling.</p>
             <div class="sub-buttons">
               <a href="https://github.com/jschuel/migYOLO/tree/main" class="btn" target="_blank">GitHub</a>
               <a href="https://migyolo.readthedocs.io/en/stable/" class="btn" target="_blank">Documentation</a>
             </div>
           </div>
+
           <div class="card">
             <img src="assets/images/project2.png" alt="MIGDAL_simulator">
             <h3>MIGDAL_simulator</h3>
-            <p>Fast end-to-end MIGDAL detector simulation with a flexible YAML interface.</p>
+            <p>Fast end-to-end simulation of the MIGDAL detector with a flexible YAML interface.</p>
             <div class="sub-buttons">
               <a href="https://github.com/jschuel/MIGDAL_simulator" class="btn" target="_blank">GitHub</a>
               <a href="https://migdal-simulator.readthedocs.io/en/latest/index.html" class="btn" target="_blank">Documentation</a>
             </div>
           </div>
+
           <div class="card">
             <img src="assets/images/project3.png" alt="BEASTnet">
             <h3>BEASTnet</h3>
-            <p>2D and 3D convolutional neural networks yielding world-leading directional reconstruction performance in the BEAST TPCs developed at the University of Hawaii.</p>
+            <p>2D/3D CNNs for best-in-class directional reconstruction performance in BEAST TPCs.</p>
             <div class="sub-buttons">
               <a href="comingsoon.html" class="btn">Coming Soon</a>
             </div>
           </div>
+
           <div class="card">
             <img src="assets/images/objectkeypointls.png" alt="Object Keypoint Detection">
             <h3>Object Keypoint Detection</h3>
-            <p>General framework to create an object-keypoint detection data labeling interface in LabelStudio, including an example of setting up automated pre-annotations with a pretrained YOLOv8-pose model.</p>
+            <p>XML-based keypoint labeling in LabelStudio, with YOLOv8-pose preannotations.</p>
             <div class="sub-buttons">
               <a href="https://github.com/jschuel/objectKeyPointLabelStudio" class="btn" target="_blank">GitHub</a>
             </div>
           </div>
+
         </div>
       </div>
     </section>
