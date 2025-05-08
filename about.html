@@ -18,8 +18,10 @@
 
   <!-- Page-specific layout -->
   <style>
+    /* Make about_bg.jpg the section background */
     #about {
-      background: #000;
+      background: url('assets/images/about_bg.jpg') no-repeat center center/cover;
+      background-color: #000; /* fallback */
       padding: 4em 20px;
       color: #fff;
     }
@@ -62,14 +64,13 @@
       margin-top: 2em;
     }
 
-    /* Traditional hyperlink styling in bio text */
+    /* Lighter blue underlined links */
     .bio-text a {
-      color: #4A90E2;            /* lighter blue */
+      color: #4A90E2;
       text-decoration: underline;
     }
     .bio-text a:hover {
-      color: #ff4757;            /* accent hover color */
-      text-decoration: underline;
+      color: #ff4757;
     }
   </style>
 </head>
@@ -94,7 +95,7 @@
         <!-- Text -->
         <div class="bio-text">
           <h2>Biography</h2>
-                    <p>
+          <p>
             Jeff Schueler is an experimental particle physicist specializing in improving particle detector
             performance through advanced machine learning techniques. Born and raised in the Seattle area,
             he earned his Bachelor’s degrees in Mathematics and Physics at the University of Washington.
@@ -157,7 +158,7 @@
         <div class="bio-portrait">
           <!-- Primary portrait -->
           <img src="assets/images/parallax-bg.jpg" alt="Jeff Schueler">
-          <!-- Updated Fuji photo below -->
+          <!-- Fuji photo below; verify file is named exactly "jeff-fuji.jpg" -->
           <img src="assets/images/jeff-fuji.jpg" alt="Jeff at Mt. Fuji">
           <!-- Buttons -->
           <div class="button-group">
