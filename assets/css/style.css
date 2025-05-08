@@ -242,34 +242,30 @@ nav ul li a.active {
     padding-bottom: 4px;
 }
 
-/* === Dropdown under “Research” === */
-nav ul li {
+/* === Dropdown menu under “Research” on hover === */
+nav ul li.dropdown {
   position: relative;
 }
-
-nav ul li .dropdown-menu {
+nav ul li.dropdown .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background: #000;
-  list-style: none;
-  padding: 0;
-  margin: 0;
   border: 1px solid #333;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   z-index: 1000;
 }
-
-nav ul li:hover .dropdown-menu {
+nav ul li.dropdown:hover .dropdown-menu {
   display: block;
 }
-
-nav ul li .dropdown-menu li a {
+nav ul li.dropdown .dropdown-menu li a {
   display: block;
   padding: 0.5em 1em;
   white-space: nowrap;
 }
-
-nav ul li .dropdown-menu li a:hover {
+nav ul li.dropdown .dropdown-menu li a:hover {
   background: #333;
 }
