@@ -18,14 +18,23 @@
 
   <!-- Page-specific layout -->
   <style>
-    /* Make about_bg.jpg the section background */
+    /* Grayed‐out background overlay */
     #about {
+      position: relative;
       background: url('assets/images/about_bg.jpg') no-repeat center center/cover;
       background-color: #000; /* fallback */
       padding: 4em 20px;
       color: #fff;
     }
+    #about::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8); /* heavier overlay */
+    }
     .about-layout {
+      position: relative;
+      z-index: 1;
       display: flex;
       flex-wrap: wrap;
       gap: 2em;
@@ -158,7 +167,7 @@
         <div class="bio-portrait">
           <!-- Primary portrait -->
           <img src="assets/images/parallax-bg.jpg" alt="Jeff Schueler">
-          <!-- Fuji photo below; verify file is named exactly "jeff-fuji.jpg" -->
+          <!-- Fuji photo below -->
           <img src="assets/images/jeff-fuji.jpg" alt="Jeff at Mt. Fuji">
           <!-- Buttons -->
           <div class="button-group">
@@ -183,6 +192,7 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="assets/js/scripts.js"></script>
 </body>
 </html>
