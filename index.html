@@ -5,23 +5,27 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Definitely Jeff</title>
 
-  <!-- Global Styles -->
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" 
+    rel="stylesheet"
+  >
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  >
 
-  <!-- Page-specific: space About & Contact symmetrically -->
+  <!-- Page‐specific override -->
   <style>
-    /* Scroll just under the fixed nav */
-    section { scroll-margin-top: 60px; }
-
-    /* Almost full‐viewport section, leaving room for footer peek */
+    /* Reserve room for footer so About+Contact can compress */
     #about.parallax {
       min-height: calc(100vh - 120px);
       padding: 4em 20px;
       background: url('assets/images/header-bg2.jpg') no-repeat center center/cover fixed;
     }
-    /* Distribute blocks evenly */
+
+    /* Shorten container so section is a bit “taller” than the content */
     #about.parallax .container {
       display: flex;
       flex-direction: column;
@@ -32,14 +36,14 @@
       margin: 0 auto;
       text-align: center;
     }
-    /* No extra manual margins here */
+
+    /* Remove any manual top‐margin */
     #about .contact-block {
       margin: 0;
     }
   </style>
 </head>
 <body>
-
   <!-- NAVIGATION BAR -->
   <nav>
     <ul>
