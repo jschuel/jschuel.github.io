@@ -7,27 +7,11 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
   >
-
-  <!-- Inline override to ensure #about covers full viewport and spacing is tight -->
-  <style>
-    /* Make the About/Contact section exactly one viewport tall */
-    #about.parallax {
-      height: 100vh;
-      padding: 2em 0;
-    }
-    /* Pull Contact block closer to About block */
-    #about .contact-block {
-      margin-top: 1em;
-    }
-  </style>
 </head>
 <body>
 
@@ -55,14 +39,14 @@
       </ul>
       <p>Your Journey Starts Here</p>
       <div class="splash-buttons">
-        <!-- Only the Explore button now -->
+        <!-- Only Explore now -->
         <a href="#about" class="btn">Explore</a>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- COMBINED ABOUT + CONTACT SECTION -->
+    <!-- UNIFIED ABOUT + CONTACT SECTION -->
     <section id="about" class="parallax">
       <div class="container">
         <!-- About Me -->
@@ -70,8 +54,8 @@
         <p>Who am I? Definitely Jeff. Want to learn more?</p>
         <a href="about.html" class="btn">Learn More</a>
 
-        <!-- Contact Me (inside the same parallax) -->
-        <div class="contact-block">
+        <!-- Contact Me -->
+        <div class="contact-block" style="margin-top:1.5em;">
           <h2>Contact Me</h2>
           <p>Like what you see? Want to collaborate? Give me a job?</p>
           <a href="mailto:schuel93@gmail.com" class="btn">Get In Touch</a>
@@ -83,7 +67,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Jeff Schueler | See me at:</p>
+      <p>&copy; 2024 Jeff Schueler | See me at:</p>
       <ul class="social">
         <li><a href="https://github.com/jschuel"><i class="fab fa-github"></i></a></li>
         <li><a href="https://www.linkedin.com/in/jeff-schueler-ph-d-ab3bb5248/"><i class="fab fa-linkedin"></i></a></li>

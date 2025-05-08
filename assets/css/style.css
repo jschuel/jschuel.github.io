@@ -233,7 +233,3 @@ footer p {
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Ensure anchors aren’t hidden under nav */
-section {
-    scroll-margin-top: 60px;
-}

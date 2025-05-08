@@ -15,35 +15,6 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
   >
-
-  <style>
-    /* About-page specific overrides */
-    #about {
-      background-color: #000;
-      background-image: url('assets/images/parallax-bg.jpg');
-      background-repeat: no-repeat;
-      background-position: top right;
-      padding: 4em 20px;
-    }
-    #about .container {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    #about h2 {
-      font-size: 2.5em;  /* match Research page */
-      margin-bottom: 0.5em;
-    }
-    #about p {
-      margin-bottom: 1.2em;
-      line-height: 1.6;
-    }
-    .button-group {
-      margin-top: 2em;
-      display: flex;
-      gap: 1em;
-    }
-  </style>
 </head>
 <body>
 
@@ -59,8 +30,10 @@
     </ul>
   </nav>
 
+  <!-- MAIN CONTENT -->
   <main>
-    <section id="about">
+    <section id="about" class="parallax"
+             style="background: url('assets/images/parallax-bg.jpg') no-repeat center center/cover fixed; height: 100vh;">
       <div class="container">
         <h2>Biography</h2>
 
@@ -81,9 +54,9 @@
         <p>
           Jeff then moved to Honolulu to pursue graduate studies at the University of Hawaiʻi, where he
           investigated beam-induced neutron backgrounds at the SuperKEKB accelerator for the Belle II
-          experiment and led gas Time Projection Chamber (TPC) research and development. In his third year,
-          he lived onsite at KEK in Tsukuba, Japan, and led the commissioning efforts of shoebox-sized TPCs
-          that remain in use to this day.
+          experiment and led gas Time Projection Chamber (TPC) research and development. In his third year
+          he lived onsite at KEK in Tsukuba, Japan, commissioning shoebox-sized TPC prototypes that remain
+          in use today.
         </p>
 
         <p>
@@ -97,7 +70,7 @@
         <p>
           Jeff received his PhD in 2022 and joined the University of New Mexico as a postdoctoral researcher
           on the MIGDAL experiment, which aims to observe and characterize the Migdal effect in nuclear
-          scattering. Early in his tenure, he conceived and implemented a YOLOv8-based real-time image
+          scattering. Early in his tenure he conceived and implemented a YOLOv8-based real-time image
           analysis pipeline, processing nearly 2 TB of data per hour on a consumer desktop to search for
           Migdal signatures—an approach now running continuously as MIGDAL collects data.
         </p>
@@ -108,12 +81,8 @@
           solve cutting-edge problems in experimental physics.
         </p>
 
-        <p>
-          In his spare time, Jeff enjoys crossword puzzles, running, retro video games, cooking, and rock climbing.
-        </p>
-
-        <!-- Buttons below the content -->
-        <div class="button-group">
+        <!-- UPDATED BUTTON GROUP -->
+        <div class="button-group" style="margin-top: 2em;">
           <a href="research.html" class="btn">Learn More About My Research</a>
           <a href="teaching.html" class="btn">Learn About My Teaching</a>
         </div>
