@@ -41,7 +41,31 @@ header#header h1 { font-size: 4rem; margin-bottom: 1rem; }
 .btn:hover { background: #004999; }
 
 /* Navigation */
-.nav-list { list-style: none; display: flex; gap: 1rem; background: rgba(0,0,0,0.6); padding: 1rem; position: fixed; width: 100%; top: 0; left: 0; z-index: 100; justify-content: center; }
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  background: rgba(255,255,255,0.9); /* Light translucent background for readability */
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  justify-content: center;
+}
+.nav-list a {
+  font-weight: 700;
+  color: #333; /* Dark text for contrast */
+  padding: 0.25rem 0.5rem;
+  transition: color 0.3s, background 0.3s;
+}
+.nav-list a:hover {
+  color: #0066cc;
+  background: rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
 .nav-list a { font-weight: 700; color: #fff; }
 
 /* Parallax Sections */
