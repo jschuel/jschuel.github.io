@@ -16,20 +16,22 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
   >
 
-  <!-- Page-specific override: adjust About+Contact spacing -->
+  <!-- Page‐specific override: center About & Contact equally -->
   <style>
-    /* Keep the section nearly full-screen but allow footer peek */
     #about.parallax {
+      background: url('assets/images/header-bg2.jpg') no-repeat center center/cover fixed;
       min-height: calc(100vh - 120px);
-      padding: 4em 20px;
+      padding: 0 20px;
+    }
+    #about.parallax .container {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      background: url('assets/images/header-bg2.jpg') no-repeat center center/cover fixed;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 100%;
     }
-    /* Increase spacing between About Me and Contact Me */
     #about .contact-block {
-      margin-top: 12em;
+      margin-top: 0; /* remove old spacing */
     }
   </style>
 </head>
@@ -68,12 +70,14 @@
     <!-- Unified About + Contact Section -->
     <section id="about" class="parallax">
       <div class="container">
-        <!-- About Me -->
-        <h2>About Me</h2>
-        <p>Who am I? Definitely Jeff. Want to learn more?</p>
-        <a href="about.html" class="btn">Learn More</a>
+        <!-- Grouped About block -->
+        <div class="about-block">
+          <h2>About Me</h2>
+          <p>Who am I? Definitely Jeff. Want to learn more?</p>
+          <a href="about.html" class="btn">Learn More</a>
+        </div>
 
-        <!-- Contact Me (now much further down) -->
+        <!-- Contact block -->
         <div class="contact-block">
           <h2>Contact Me</h2>
           <p>Like what you see? Want to collaborate? Give me a job?</p>
