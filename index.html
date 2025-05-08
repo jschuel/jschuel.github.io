@@ -16,41 +16,20 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
   >
 
-  <!-- Page-specific tweaks -->
+  <!-- Page-specific override: adjust About+Contact spacing -->
   <style>
-    /* Keep header/nav opaque and fixed */
-    nav {
-      background: #000 !important;
-    }
-    body {
-      /* Reserve space for fixed header and fixed footer */
-      padding-top: 60px;    /* adjust if your nav height differs */
-      padding-bottom: 80px; /* adjust to match footer height */
-    }
-    /* Always-visible footer */
-    footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: #1a1a1a;
-      z-index: 1000;
-    }
-    /* Unified About + Contact section: no forced full-height */
+    /* Keep the section nearly full-screen but allow footer peek */
     #about.parallax {
-      min-height: auto;
+      min-height: calc(100vh - 120px);
       padding: 4em 20px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       background: url('assets/images/header-bg2.jpg') no-repeat center center/cover fixed;
     }
-    /* More separation: push Contact down */
+    /* Increase spacing between About Me and Contact Me */
     #about .contact-block {
       margin-top: 12em;
-    }
-    /* Ensure anchored scroll lands below nav */
-    section {
-      scroll-margin-top: 60px;
     }
   </style>
 </head>
@@ -94,7 +73,7 @@
         <p>Who am I? Definitely Jeff. Want to learn more?</p>
         <a href="about.html" class="btn">Learn More</a>
 
-        <!-- Contact Me pushed further down -->
+        <!-- Contact Me (now much further down) -->
         <div class="contact-block">
           <h2>Contact Me</h2>
           <p>Like what you see? Want to collaborate? Give me a job?</p>
@@ -104,7 +83,7 @@
     </section>
   </main>
 
-  <!-- FOOTER (always visible) -->
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <p>&copy; 2025 Jeff Schueler | See me at:</p>
