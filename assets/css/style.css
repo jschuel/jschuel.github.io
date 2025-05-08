@@ -228,9 +228,16 @@ nav ul li a.active {
 /* Unified About + Contact section in index.html */
 #about.parallax {
     background: url('../images/header-bg2.jpg') no-repeat center center/cover fixed;
-    min-height: 100vh;
-    padding: 4em 0 2em;
+    /* removed min-height so section shrinks to its content and footer shows */
+    padding: 4em 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* start at top rather than centering */
+}
+
+/* Active nav link */
+nav ul li a.active {
+    color: #ff4757;
+    border-bottom: 2px solid #ff4757;
+    padding-bottom: 4px;
 }
