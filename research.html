@@ -18,6 +18,9 @@
 
   <!-- Page-specific layout -->
   <style>
+    /* Avoid bleeding under fixed nav */
+    section { scroll-margin-top: 60px; }
+
     /* Intro buttons */
     .button-group.research-buttons {
       display: flex;
@@ -26,6 +29,7 @@
       margin-top: 2em;
       flex-wrap: wrap;
     }
+
     /* Projects row: single line */
     .projects-row {
       display: flex;
@@ -37,6 +41,22 @@
     .projects-row .card {
       flex: 1;
       max-width: 250px;
+      text-align: left;
+    }
+
+    /* Sub-buttons hidden until hover */
+    .projects-row .card .sub-buttons {
+      display: none;
+      flex-direction: column;
+      gap: 0.5em;
+      margin-top: 1em;
+    }
+    .projects-row .card:hover .sub-buttons {
+      display: flex;
+    }
+    .projects-row .card .sub-buttons .btn {
+      font-size: 0.9em;
+      padding: 0.5em 1em;
     }
   </style>
 </head>
@@ -58,8 +78,17 @@
     <!-- Research Intro -->
     <section id="research-intro">
       <div class="container">
-        <p><!-- Placeholder: Brief overview of developing ML methods for imaging detectors --></p>
-        <p><!-- Placeholder: Mention key goals or experiments where these techniques apply --></p>
+        <h1 class="page-title">
+          Developing novel machine learning techniques to improve the performance of imaging particle detectors
+        </h1>
+        <p>
+          Placeholder: I develop and apply advanced machine learning algorithms to enhance particle identification,
+          directional reconstruction, and background suppression in high-resolution imaging detectors.
+        </p>
+        <p>
+          Placeholder: My work spans real-time object detection pipelines, end-to-end simulation frameworks,
+          and deep neural networks for rare event search experiments.
+        </p>
         <div class="button-group research-buttons">
           <a href="publications.html" class="btn">Selected Publications</a>
           <a href="talks.html" class="btn">Selected Talks</a>
@@ -71,31 +100,62 @@
     <!-- Projects -->
     <section id="research">
       <div class="container">
-        <h2>Research Projects</h2>
+        <h2>Recent Projects</h2>
         <div class="projects-row">
+
+          <!-- Project 1 -->
           <div class="card">
-            <img src="assets/images/project1.png" alt="Project 1">
-            <h3>Project 1</h3>
-            <p>Short description of Project 1.</p>
+            <img src="assets/images/project1.png" alt="migYOLO">
+            <h3>migYOLO</h3>
+            <p>
+              Real-time object detection pipeline for the MIGDAL detector, including automated ML-assisted
+              bounding-box labeling templates.
+            </p>
+            <div class="sub-buttons">
+              <a href="https://github.com/jschuel/migYOLO/tree/main" class="btn" target="_blank">GitHub</a>
+              <a href="https://migyolo.readthedocs.io/en/stable/" class="btn" target="_blank">Documentation</a>
+            </div>
           </div>
 
+          <!-- Project 2 -->
           <div class="card">
-            <img src="assets/images/project2.png" alt="Project 2">
-            <h3>Project 2</h3>
-            <p>Short description of Project 2.</p>
+            <img src="assets/images/project2.png" alt="MIGDAL_simulator">
+            <h3>MIGDAL_simulator</h3>
+            <p>
+              Fast end-to-end simulation of the MIGDAL detector with a flexible YAML interface
+              for tuning simulation parameters.
+            </p>
+            <div class="sub-buttons">
+              <a href="https://github.com/jschuel/MIGDAL_simulator" class="btn" target="_blank">GitHub</a>
+              <a href="https://migdal-simulator.readthedocs.io/en/latest/index.html" class="btn" target="_blank">Documentation</a>
+            </div>
           </div>
 
+          <!-- Project 3 -->
           <div class="card">
-            <img src="assets/images/project3.png" alt="Project 3">
-            <h3>Project 3</h3>
-            <p>Short description of Project 3.</p>
+            <img src="assets/images/project3.png" alt="BEASTnet">
+            <h3>BEASTnet</h3>
+            <p>
+              2D and 3D CNNs achieving world-leading directional reconstruction performance
+              for University of Hawaiʻi TPCs.
+            </p>
+            <div class="sub-buttons">
+              <a href="comingsoon.html" class="btn">Coming Soon</a>
+            </div>
           </div>
 
+          <!-- Project 4 -->
           <div class="card">
             <img src="assets/images/objectkeypointls.png" alt="Object Keypoint Detection">
             <h3>Object Keypoint Detection</h3>
-            <p>Short description of Project 4.</p>
+            <p>
+              Framework for XML-based keypoint labeling in LabelStudio, including YOLOv8-pose preannotations.
+            </p>
+            <div class="sub-buttons">
+              <a href="https://github.com/jschuel/objectKeyPointLabelStudio" class="btn" target="_blank">GitHub</a>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
