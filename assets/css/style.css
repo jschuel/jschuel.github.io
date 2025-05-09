@@ -483,5 +483,15 @@ html {
   .button-group.research-buttons {
     flex-direction: column !important;
     align-items: stretch;
+    width: 100%;
+  }
+  .button-group.research-buttons .btn {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal;      /* allow text wrap */
+    word-break: break-word;   /* prevent overflow of long words */
+    box-sizing: border-box;
+    margin-bottom: 0.75em;
   }
 }
