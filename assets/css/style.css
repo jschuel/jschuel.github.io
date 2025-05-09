@@ -405,3 +405,36 @@ nav ul li.dropdown .dropdown-menu li a:hover {
     border: none;
   }
 }
+
+/* === Prevent any horizontal overflow === */
+html, body {
+  overflow-x: hidden;
+}
+
+/* === Mobile (≤768px) tweaks to stop bleeding === */
+@media (max-width: 768px) {
+  /* Make mobile nav fill screen width */
+  .nav-links {
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Tighten padding on nav items */
+  .nav-links li a {
+    padding: 0.75em 1em;
+  }
+
+  /* Button groups (research, generic) wrap and buttons span full width */
+  .button-group,
+  .button-group.research-buttons {
+    flex-wrap: wrap;
+  }
+  .button-group .btn,
+  .button-group.research-buttons .btn {
+    flex: 1 1 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0.75em;
+  }
+}
