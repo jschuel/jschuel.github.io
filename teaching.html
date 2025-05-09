@@ -2,21 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Teaching | Definitely Jeff</title>
+
+  <!-- Global Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" 
+    rel="stylesheet"
+  >
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  >
+
+  <!-- Page-specific layout -->
+  <style>
+    /* Ensure content scrolls below fixed nav */
+    section { scroll-margin-top: 60px; }
+
+    /* Teaching section styling */
+    #teaching {
+      background: none;
+      color: #fff;
+    }
+    #teaching .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4em 1em;
+      text-align: left;
+    }
+    #teaching h2 {
+      margin-top: 0;
+      font-size: 2.5em;
+      text-align: center;
+    }
+    #teaching h3 {
+      margin-top: 2em;
+      font-size: 1.75em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    #teaching p {
+      margin-bottom: 1.5em;
+      line-height: 1.6;
+    }
+    #teaching ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 1.5em;
+    }
+    #teaching li {
+      margin-bottom: 0.75em;
+      line-height: 1.4;
+    }
+    #teaching .sub-list {
+      margin-left: 1em;
+    }
+  </style>
 </head>
 <body>
-  <nav>…</nav>
 
-  <main class="container">
-    <h2>Teaching</h2>
-    <!-- your teaching content here -->
+  <!-- Navigation -->
+  <nav>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span class="hamburger"></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li class="dropdown">
+        <a href="research.html">Research</a>
+        <ul class="dropdown-menu">
+          <li><a href="research.html">Overview</a></li>
+          <li><a href="publications.html">Selected Publications</a></li>
+          <li><a href="talks.html">Selected Talks</a></li>
+        </ul>
+      </li>
+      <li><a href="teaching.html" class="active">Teaching</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="mailto:schuel93@gmail.com">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="teaching">
+      <div class="container">
+        <h2>Teaching</h2>
+
+        <h3>Teaching Statement</h3>
+        <p>
+          Prior to pursuing a career in academia, I taught high school physics for two years through the New York City Teaching Fellows program at Maspeth High School in Queens, NY, developing hands-on laboratory experiences and mentoring students in advanced mechanics and electromagnetism.
+        </p>
+        <p>
+          I strive to incorporate student-centered learning in every class. While at the University of Hawaiʻi, I and two fellow graduate students piloted a recitation program for our calculus-based Physics I courses. Each week, one lecture was replaced by a graduate-student–led problem session in which students worked in small groups on context-rich problems, with the instructor acting as a facilitator through guided questioning. This initiative proved so effective that the department now includes these sessions in all undergraduate physics courses.
+        </p>
+        <p>
+          Building on that success, I introduced recitation sessions in upper-division quantum mechanics classes, enabling deeper conceptual engagement and peer instruction. These sessions have since become a regular component of UH’s curriculum.
+        </p>
+
+        <h3>Current Courses</h3>
+        <p>
+          None. As a postdoctoral researcher, I work remotely from Seattle, WA for the University of New Mexico.
+        </p>
+
+        <h3>Past Courses</h3>
+        <ul>
+          <li><strong>At University of Hawaiʻi:</strong>
+            <ul class="sub-list">
+              <li>Autumn 2019: Phys 480 – Quantum Mechanics I (recitation lead)</li>
+              <li>Spring 2017: Phys 481 – Quantum Mechanics II (recitation lead)</li>
+              <li>Autumn 2016: Phys 480 – Quantum Mechanics I (recitation lead)</li>
+              <li>Autumn 2016: Phys 170 – Calculus-based Mechanics (Head TA for recitation sessions; three classes/week)</li>
+              <li>Autumn 2016: Phys 170L – Mechanics Lab (one class/week)</li>
+              <li>Summer 2016: Phys 170L – Mechanics Lab (four classes/week)</li>
+              <li>Spring 2016: Phys 481 – Quantum Mechanics II (recitation lead; first upper-division recitations, materials developed from scratch)</li>
+              <li>Spring 2016: Phys 152L – E&M, Optics & Waves Lab (two classes/week)</li>
+              <li>Autumn 2015: Phys 151L – Mechanics Lab (two classes/week)</li>
+            </ul>
+          </li>
+          <li><strong>At Maspeth High School:</strong>
+            <ul class="sub-list">
+              <li>2014–2015: AP Physics C: Mechanics (one class), AP Physics C: E&M (one-on-one honors session), 11th Grade Honors Physics (one class), 11th Grade Regents Physics (two classes)</li>
+              <li>2013–2014: 11th Grade Honors Physics (one class), 11th Grade Regents Physics (three classes)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
-  <footer>…</footer>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Jeff Schueler | See me at:</p>
+      <ul class="social">
+        <li><a href="https://github.com/jschuel"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/jeff-schueler-ph-d-ab3bb5248/"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://inspirehep.net/authors/1753258"><i class="fas fa-graduation-cap"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
   <script src="assets/js/scripts.js"></script>
 </body>
 </html>
