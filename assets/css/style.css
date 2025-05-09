@@ -495,3 +495,35 @@ html {
     margin-bottom: 0.75em;
   }
 }
+
+/* === Research page button fix on mobile === */
+@media (max-width: 768px) {
+  /* Make the research intro container truly full-width */
+  #research-intro .container {
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Stack research buttons and force full width */
+  #research-intro .button-group.research-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 0.75em;
+  }
+  #research-intro .button-group.research-buttons .btn {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;    /* allow text wrap */
+    word-break: break-word !important; /* break long text */
+    padding-left: 0.75em;              /* match container padding */
+    padding-right: 0.75em;
+    margin: 0;                         /* remove extra margins */
+  }
+}
+
