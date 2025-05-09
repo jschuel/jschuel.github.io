@@ -278,3 +278,70 @@ nav ul li.dropdown .dropdown-menu li a:hover {
 #publications a:hover {
   color: #ff4757;
 }
+
+
+/* === Responsive adjustments for tablets/phones === */
+@media (max-width: 768px) {
+  /* Nav → vertical, full-width links */
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul li a {
+    display: block;
+    padding: 1em;
+  }
+  /* Dropdown submenu full-width */
+  nav ul li.dropdown .dropdown-menu {
+    position: static;
+    border: none;
+  }
+
+  /* Main containers get side padding */
+  .container {
+    padding: 0 1em;
+  }
+
+  /* Button groups → stack */
+  .button-group,
+  .button-group.research-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .button-group .btn,
+  .button-group.research-buttons .btn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.75em;
+  }
+
+  /* Projects row → column cards */
+  .projects-row {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .projects-row .card {
+    max-width: 100%;
+  }
+
+  /* Footer social icons centered */
+  footer .social {
+    justify-content: center;
+  }
+
+  /* Reduce header text size */
+  #header h1 {
+    font-size: 2.5em;
+  }
+
+  /* Tighter section padding */
+  #talks .container,
+  #publications .container,
+  section#research-intro .container {
+    padding: 2em 0;
+  }
+}
