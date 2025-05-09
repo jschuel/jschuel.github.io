@@ -345,3 +345,63 @@ nav ul li.dropdown .dropdown-menu li a:hover {
     padding: 2em 0;
   }
 }
+
+/* Hide the toggle by default, show on mobile */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1em;
+  z-index: 1001; /* over the overlay */
+}
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 5px 0;
+  transition: transform 0.3s;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  /* Show toggle */
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 0.5em;
+    right: 1em;
+  }
+  /* Hide links by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 75%;
+    max-width: 300px;
+    border-left: 1px solid #333;
+    z-index: 1000;
+  }
+  /* When open, show them */
+  .nav-links.open {
+    display: flex;
+  }
+  /* Full-width clickable items */
+  .nav-links li a {
+    display: block;
+    padding: 1em;
+    border-bottom: 1px solid #333;
+  }
+  /* Align dropdown submenu inside mobile menu */
+  .nav-links .dropdown .dropdown-menu {
+    position: static;
+    border: none;
+  }
+}
