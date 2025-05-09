@@ -54,6 +54,15 @@
         padding: 2em 1em;
       }
     }
+
+    /* Download link styling */
+    #cv p a {
+      color: #4A90E2;
+      text-decoration: underline;
+    }
+    #cv p a:hover {
+      color: #ff4757;
+    }
   </style>
 </head>
 <body>
@@ -84,13 +93,18 @@
     <section id="cv">
       <div class="container">
         <h2>Curriculum Vitae</h2>
-        <p>If the preview below does not load, <a href="cv/CV_2024.pdf" target="_blank">download the PDF here</a>.</p>
+        <p>
+          If the preview below does not load, 
+          <a href="cv/CV_2024.pdf" target="_blank">download the PDF here</a>.
+        </p>
         <iframe 
           src="cv/CV_2024.pdf" 
           class="pdf-embed"
         >
           <!-- fallback link -->
-          <p>Your browser does not support embedded PDFs. <a href="cv/CV_2024.pdf" target="_blank">Download the PDF</a>.</p>
+          <p>Your browser does not support embedded PDFs. 
+            <a href="cv/CV_2024.pdf" target="_blank">Download the PDF</a>.
+          </p>
         </iframe>
       </div>
     </section>
