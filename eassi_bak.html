@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EASSI | Definitely Jeff</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    section { scroll-margin-top: 60px; padding-top: 80px; }
+    #eassi .container { max-width: 800px; margin: 0 auto; text-align: center; }
+    #eassi h2 { margin-top: 0; font-size: 2rem; }
+    #eassi img { max-width: 100%; height: auto; border-radius: 12px; margin: 20px 0; }
+    #eassi p { font-size: 1.1rem; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <!-- Hamburger toggle (hidden on desktop) -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span class="hamburger"></span>
+    </button>
+
+    <!-- Your existing links -->
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li class="dropdown">
+        <a href="research.html">Research</a>
+        <ul class="dropdown-menu">
+          <li><a href="research.html">Overview</a></li>
+          <li><a href="publications.html">Selected Publications</a></li>
+          <li><a href="talks.html">Selected Talks</a></li>
+        </ul>
+      </li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="mailto:schuel93@gmail.com">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="eassi">
+      <div class="container">
+        <h2>EASSI</h2>
+        <h3>Energy-Aware Segmentation for Scientific Images</h3>
+
+        <img src="assets/images/eassi_seg.gif" alt="EASSI demo animation">
+
+        <p>
+          Energy-Aware Segmentation for Scientific Images (EASSI) is a new deep learning framework for separating overlapping objects 
+          in scientific images while preserving object-specific intensities. Unlike 
+          traditional segmentation approaches that only provide boundaries, EASSI 
+          jointly predicts per-pixel intensities for each object and enforces 
+          approximate conservation of the observed signal. This significantly improves
+	  both topological and intensity reconstruction in regions of overlap, even in cases
+	  where a faint object overlaps with a much brighter object.
+        </p>
+
+        <p>
+          The initial application of EASSI is to the MIGDAL experiment, where 
+          faint electron recoil tracks must be disentangled from overlapping 
+          nuclear recoils in optical time projection chamber data. Beyond particle 
+          physics, EASSI has potential applications in astronomy (galaxy deblending), 
+          biomedical imaging (fluorescence microscopy), and medical scans (PET/CT).
+        </p>
+
+        <p>
+          A detailed paper describing EASSI and its performance is currently in 
+          preparation. Check back soon for updates and open-source software.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Jeff Schueler | See me at:</p>
+      <ul class="social">
+        <li><a href="https://github.com/jschuel"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/jeff-schueler-ph-d-ab3bb5248/"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://inspirehep.net/authors/1753258"><i class="fas fa-graduation-cap"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>

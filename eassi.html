@@ -11,10 +11,44 @@
 
   <style>
     section { scroll-margin-top: 60px; padding-top: 80px; }
-    #eassi .container { max-width: 800px; margin: 0 auto; text-align: center; }
-    #eassi h2 { margin-top: 0; font-size: 2rem; }
-    #eassi img { max-width: 100%; height: auto; border-radius: 12px; margin: 20px 0; }
-    #eassi p { font-size: 1.1rem; line-height: 1.6; }
+    #eassi .container { max-width: 1000px; margin: 0 auto; }
+    #eassi h2 { margin-top: 0; font-size: 2rem; text-align: center; }
+    #eassi h3 { text-align: center; margin-bottom: 40px; }
+
+    /* Flex layout for text + image */
+    .eassi-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+    .eassi-text {
+      flex: 1 1 55%;
+    }
+    .eassi-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.2em;
+    }
+    .eassi-gif {
+      flex: 1 1 40%;
+      text-align: center;
+    }
+    .eassi-gif img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    /* Stack on small screens */
+    @media (max-width: 768px) {
+      .eassi-content {
+        flex-direction: column;
+      }
+      .eassi-text, .eassi-gif {
+        flex: 1 1 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -49,30 +83,38 @@
         <h2>EASSI</h2>
         <h3>Energy-Aware Segmentation for Scientific Images</h3>
 
-        <img src="assets/images/eassi_seg.gif" alt="EASSI demo animation">
+        <div class="eassi-content">
+          <!-- Left: Text -->
+          <div class="eassi-text">
+            <p>
+              Energy-Aware Segmentation for Scientific Images (EASSI) is a new deep learning framework for separating overlapping objects 
+              in scientific images while preserving object-specific intensities. Unlike 
+              traditional segmentation approaches that only provide boundaries, EASSI 
+              jointly predicts per-pixel intensities for each object and enforces 
+              approximate conservation of the observed signal. This significantly improves
+              both topological and intensity reconstruction in regions of overlap, even in cases
+              where a faint object overlaps with a much brighter object.
+            </p>
 
-        <p>
-          Energy-Aware Segmentation for Scientific Images (EASSI) is a new deep learning framework for separating overlapping objects 
-          in scientific images while preserving object-specific intensities. Unlike 
-          traditional segmentation approaches that only provide boundaries, EASSI 
-          jointly predicts per-pixel intensities for each object and enforces 
-          approximate conservation of the observed signal. This significantly improves
-	  both topological and intensity reconstruction in regions of overlap, even in cases
-	  where a faint object overlaps with a much brighter object.
-        </p>
+            <p>
+              The initial application of EASSI is to the MIGDAL experiment, where 
+              faint electron recoil tracks must be disentangled from overlapping 
+              nuclear recoils in optical time projection chamber data. EASSI is interdisciplinary
+	      and has potential applications in astronomy (e.g. galaxy deblending) and in
+              biomedical imaging.
+            </p>
 
-        <p>
-          The initial application of EASSI is to the MIGDAL experiment, where 
-          faint electron recoil tracks must be disentangled from overlapping 
-          nuclear recoils in optical time projection chamber data. Beyond particle 
-          physics, EASSI has potential applications in astronomy (galaxy deblending), 
-          biomedical imaging (fluorescence microscopy), and medical scans (PET/CT).
-        </p>
+            <p>
+              A detailed paper describing EASSI and its performance is currently in 
+              preparation. Check back soon for updates and open-source software.
+            </p>
+          </div>
 
-        <p>
-          A detailed paper describing EASSI and its performance is currently in 
-          preparation. Check back soon for updates and open-source software.
-        </p>
+          <!-- Right: GIF -->
+          <div class="eassi-gif">
+            <img src="assets/images/eassi_seg.gif" alt="EASSI demo animation">
+          </div>
+        </div>
       </div>
     </section>
   </main>
