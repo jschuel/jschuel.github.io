@@ -77,6 +77,8 @@
 </head>
 <body>
 
+  <!-- NAVIGATION BAR -->
+
   <nav>
   <!-- Hamburger toggle (hidden on desktop) -->
   <button class="nav-toggle" aria-label="Toggle navigation">
@@ -85,10 +87,17 @@
 
   <!-- Your existing links, now given a class -->
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Me</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
+    <!--<li><a href="about.html">About Me</a></li> -->
     <li class="dropdown">
-      <a href="research.html" class="active">Research</a>
+      <a href="about.html">About Me</a>
+      <ul class="dropdown-menu">
+        <li><a href="about_abridged.html">Abridged Biography</a></li>
+	<li><a href="about.html">Biography</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="research.html">Research</a>
       <ul class="dropdown-menu">
         <li><a href="research.html">Overview</a></li>
         <li><a href="publications.html">Selected Publications</a></li>
@@ -100,7 +109,7 @@
     <li><a href="mailto:schuel93@gmail.com">Contact</a></li>
   </ul>
   </nav>
-
+  
   <main>
     <section id="talks">
       <div class="container">

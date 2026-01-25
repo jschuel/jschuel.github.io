@@ -84,6 +84,7 @@
 <body>
 
   <!-- NAVIGATION BAR -->
+
   <nav>
   <!-- Hamburger toggle (hidden on desktop) -->
   <button class="nav-toggle" aria-label="Toggle navigation">
@@ -92,8 +93,15 @@
 
   <!-- Your existing links, now given a class -->
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html" class="active">About Me</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
+    <!--<li><a href="about.html">About Me</a></li> -->
+    <li class="dropdown">
+      <a href="about.html">About Me</a>
+      <ul class="dropdown-menu">
+        <li><a href="about_abridged.html">Abridged Biography</a></li>
+	<li><a href="about.html">Biography</a></li>
+      </ul>
+    </li>
     <li class="dropdown">
       <a href="research.html">Research</a>
       <ul class="dropdown-menu">
@@ -116,47 +124,25 @@
         <div class="bio-text">
           <h2>Jeff Schueler&#8217;s Biography</h2>
           <p>
-            Jeff Schueler is an experimental particle physicist specializing in improving particle detector
-            performance through novel machine learning techniques. Born and raised in the Seattle area,
-            he earned his Bachelor’s degrees in Mathematics and Physics at the University of Washington.
-          </p>
-          <p>
-            After graduating, Jeff spent two years teaching physics at a public high school in Queens through the New York City Teaching Fellows. Jeff then moved to Honolulu to pursue graduate studies at the University of Hawaiʻi at Mānoa,
-            where he worked with
-            <a href="https://www.phys.hawaii.edu/~sevahsen/" target="_blank">Sven Vahsen</a>
-            investigating beam-induced neutron backgrounds
-            <a href="https://www.belle2.org/" target="_blank">Belle II experiment</a>
-            and gas Time Projection Chamber (TPC) research and development. In his third year,
-            he lived onsite at KEK in Tsukuba, Japan, and led the commissioning efforts of
-            <a href="https://inspirehep.net/literature/1962997" target="_blank">systems of shoebox-sized TPCs</a>
-            that remain in use to this day.
-          </p>
-          <p>
-            In the final year of his PhD, Jeff spearheaded the application of deep learning to enhance
-            particle identification and directional reconstruction in gas TPCs. He developed a custom ResNet
-            architecture that led to the first demonstration of vector-directional head/tail reconstruction
-            of sub-10 keV nuclear recoils on real data—an important milestone toward competitive directional
-            dark matter detectors.
-          </p>
-          <p>
-            Jeff received his PhD in 2022 and joined the University of New Mexico in early 2023 as a postdoctoral researcher
-            in <a href="https://physics.unm.edu/people/faculty/dinesh-loomba.html" target="_blank">Dinesh Loomba’s</a>
-            research group, working on the
-            <a href="https://migdal.pp.rl.ac.uk/index.html" target="_blank">MIGDAL experiment</a>.
-            The MIGDAL experiment is a rare event search experiment which aims to observe and characterize
-            the Migdal effect in nuclear scattering for the first time. Early in his tenure, Jeff conceived
-            the idea of applying object detection as a way to employ machine learning training on real data
-            for rare event search experiments in contexts where the rare event signal is a composite composed of commonly
-            observed species. He has since successfully demonstrated this idea in the MIGDAL experiment
-            through the development of an end-to-end YOLOv8-based pipeline that he trained on real data to
-            automate the experiment’s search for the Migdal effect.
-            <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.111.072004" target="_blank">This work</a>
+	    Jeff Schueler is an experimental particle physicist specializing in improving particle detector performance through novel machine learning techniques, with particular emphasis on real data training, rare event searches, and <a href="https://arxiv.org/abs/2510.06194" target="_blank">overlapping object reconstruction</a>.
+	  </p>
+	  <p>
+	    He is currently a postdoctoral researcher at the University of New Mexico in Dinesh Loomba’s research group, where he works on the <a href="https://migdal.pp.rl.ac.uk/index.html" target="_blank">MIGDAL experiment</a>. The MIGDAL experiment is a rare event search experiment which aims to observe and characterize the Migdal effect in nuclear scattering for the first time. Early in his tenure, Jeff conceived and led the application of object detection as a way to enable machine-learning training directly on real experimental data. He developed a real data-trained, end-to-end YOLOv8-based analysis pipeline that automated the MIGDAL experiment’s search for the Migdal effect at real time speeds.  <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.111.072004" target="_blank">This work</a>
             and its
             <a href="https://zenodo.org/records/12628437" target="_blank">accompanying software</a>
-            are published in PRD.
-          </p>
-          <p>
-            Jeff&#8217;s current research interests involve developing techniques to <a href="https://arxiv.org/abs/2510.06194" target="_blank">separate overlapping objects in scientific image data</a>, narrowing sim-to-real gaps, and self-supervised learning techniques for data compression and multi-modal analyses. While his background is in particle physics, all of these techniques are interdisciplinary and Jeff is eager to collaborate and dip into other domains!
+            are published in Physical Review D.
+	  </p>
+	  <p>
+	    Jeff’s analysis strategy had impact beyond the MIGDAL experiment. In the <a href="https://www.nature.com/articles\
+/s41586-025-09918-8?utm_source=x&utm_medium=social&utm_campaign=nature&linkId=39612002" target="_bla\
+nk">MARVEL experiment&#39;s 2026 Nature paper</a> reporting the discovery of the Migdal effect, the author&#39;s explicitly credit Jeff&#39;s pipeline as the inspiration for the candidate selection algorithm used in their discovery.
+	  </p>
+	  <p>
+	    Prior to his postdoctoral work, Jeff earned his PhD in 2022 from the University of Hawaiʻi at Mānoa, where he worked with Sven Vahsen investigating beam-induced neutron backgrounds at the Belle II experiment and on gas Time Projection Chamber (TPC) research and development. As a PhD student, Jeff spent a year working on site at the Belle II experiment in Tsukuba, Japan and led the commissioning efforts of systems of shoebox-sized TPCs
+            to monitor beam-induced neutron backgrounds that remain in use to this day. Using these detectors, Jeff confirmed the presence of <a href="https://inspirehep.net/literature/1962997" target="_blank">previously unknown neutron production hotspots</a> that required shielding to protect the Belle II detector. In the final year of his PhD, Jeff applied machine learning to the analysis of gas TPC data, introducing custom neural network architectures and loss functions that led to the first demonstration of accurate 3D reconstructions of sub-20 keV nuclear recoil tracks. This demonstration was an important milestone for directional dark matter detector research and development.
+	  </p>
+	  <p>
+            Before graduate school, Jeff spent two years teaching physics at a public high school in Queens through the New York City Teaching Fellows. Prior to this, he graduated from the University of Washington in his hometown of Seattle where he majored in math and physics.
           </p>
           <p>
             In his spare time, Jeff enjoys traveling (all background photos on this site were taken by him), crossword puzzles, running, reading, boardgames, PC building, retro video games,
@@ -183,7 +169,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Jeff Schueler | See me at:</p>
+      <p>&copy; 2026 Jeff Schueler | See me at:</p>
       <ul class="social">
         <li><a href="https://github.com/jschuel"><i class="fab fa-github"></i></a></li>
         <li><a href="https://www.linkedin.com/in/jeff-schueler-ph-d-ab3bb5248/"><i class="fab fa-linkedin"></i></a></li>
